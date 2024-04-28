@@ -17,3 +17,7 @@ In strict euality operators and strict inequality operators "type coercion" does
 
 In Loose equality and inequality operators "type coercion" takes place.
 "==" "!="
+
+
+AND OR NOT are called logical operators and are used widely in  if/elseif/else statements
+
