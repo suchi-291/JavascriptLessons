@@ -21,3 +21,8 @@ In Loose equality and inequality operators "type coercion" takes place.
 
 AND OR NOT are called logical operators and are used widely in  if/elseif/else statements
 
+When we need to compare one value with multiple values while taking decisions, we can use 
+SWITCH - CASE statements
+
+Note: When Switch gets turned n, till 'break' comes it keeps on executing, so it's very important
+to place the break statements
