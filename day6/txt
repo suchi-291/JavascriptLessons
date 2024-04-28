@@ -1,1 +1,12 @@
+Difference between Type Coversion and Type Coercion - Type conversion is where you manually convert the datatype of a given value using functions like number(), string(), Boolean(). Javascript has in built feature of Type coercion
+where the data type of a given value changes implicitly behind the scenes.
 
+Truthy and Falsy values:
+Values that get converted into false when boolean conversiob takes place are called as Falsy values. There are 5 such values in Javascript.
+1. 0
+2.''
+3. Undefined
+4. Nan
+5. Null
+
+Any number other than 0, any string other than empty string, all the values except the above 5 falsy values are truthy values
