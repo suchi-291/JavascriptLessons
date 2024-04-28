@@ -10,3 +10,10 @@ Values that get converted into false when boolean conversiob takes place are cal
 5. Null
 
 Any number other than 0, any string other than empty string, all the values except the above 5 falsy values are truthy values
+
+Strict and Loose Equality and inequality operators.
+In strict euality operators and strict inequality operators "type coercion" does not take place
+"===" "!=="
+
+In Loose equality and inequality operators "type coercion" takes place.
+"==" "!="
