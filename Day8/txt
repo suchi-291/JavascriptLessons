@@ -1,0 +1,9 @@
+Note: Activating strict mode will make it easier for us to write clean code, to enable that the first line of our javascript code has to be
+'use strict';
+
+ALL ABOUT FUNCTIONS
+Functions are values that need to be reused and is basically a chunk of code that needs to be repeated number of times.
+There are three ways of writing functions
+1. Function declarations: We define the function by giving it a name, when we use function declarations, it is possible to call/invoke//use the function even before its definition i.e., hoisiting is possible
+2. Function expression: We assign a variable an anonymous function that produces the value, in this type of function, it is only possible to call the function after it was declared.
+3. Arrow Function: Arrow functions are a special form of function expression, but using arrow function we can write a shorter and faster code, it is best to use for one-liner codes. "This" can not be used in arrow functions
