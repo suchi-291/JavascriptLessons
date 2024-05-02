@@ -1,1 +1,38 @@
+Arrays are a type of Data Structure in Javascript
+
+When we want to store a number of values of different data types and the data must be stored in an ordered manner we can use arrays.
+
+There are two ways of declaring arrays. One is iteral syntax and the other way is by using new Array keyword.
+
+An array can contain numbers, strings, booleans, functions, objects, another array.
+
+There are different methods that can be used to perform on arrays : push(), unshift(), pop(), shift(), indexof(), includes()
+
+push() method is used to add an element at the end of an array - the value that is produced is the length of an array
+unshift() method is used to add element at the beggining of an array
+pop() - To remove the last element, the returned value is the popped element
+shift() - To remove the element which is at the beginning of an array
+indexof() method gives the index of the element
+includes() method returns true or false by checking if the element is in an array or not.
+
+Even though we use const keyword while declaring an array or an object, it has to be noted that they are still mutable, only primitive values are immutable.
+
+An array can hold different types of values at the same time, it can be noted that they can store expressions also. An array can hold other arrays, an array can contain function calls also.
+
+
+
+Objects are a type of Data Structue in Javascript
+
+In arrays we can access the values using indexes, but in objects we access them using properties.
+Objects contain Key:vakue pairs, 
+
+Objects can contain function expressions also, the properties that returns a function value are called methods.
+
+Values inside object properties can be accessed using dot notation and bracket notation
+
+Incase we need to compute properties we can only use bracket notation
+
+Inside methods we can use 'this' keyword, this keyword refers to object inside which the method is called
+
+
 
