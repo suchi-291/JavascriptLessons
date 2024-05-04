@@ -12,4 +12,15 @@ for (let i = 0; i < btnsShowModal.length; i++) {
   console.log(btnsShowModal[i].textContent);
 }
 
-For multiple classes we can use .classlist method.. for class lists there are a couple of methods, like .remove etc to manipulate classes.
+For multiple classes we can use .classlist method.. for class lists there are a couple of methods, like .remove etc to manipulate classes. For this we do not have to use '.' 
+
+
+for (let i = 0; i < btnsShowModal.length; i++) {
+  console.log(btnsShowModal[i].textContent);
+
+  btnsShowModal[i].addEventListener('click', function () {
+    console.log('Button clicked');
+    modal.classList.remove('hidden');
+    
+  });
+}
