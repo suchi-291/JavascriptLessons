@@ -1,1 +1,13 @@
 queryselector works only for one class or attribute at a time, if there are more than one element having same class name we have to use querySelectorAll.
+
+
+Suppose we want a variable name for the elements of a given class, and there are more than one element with the same class. When we use document.querySelectorAll a nodeList containing all the elements with that class name will get stored in to that variable, it appears like an array, so in order to access each element independently, we have to use loop. 
+
+Consider this code snippet from the project.. there are three buttons with the same class .show-modal. 
+
+const btnsShowModal = document.querySelectorAll('.show-modal');
+console.log(btnsShowModal);
+
+for (let i = 0; i < btnsShowModal.length; i++) {
+  console.log(btnsShowModal[i].textContent);
+}
