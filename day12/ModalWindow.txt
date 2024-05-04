@@ -1,1 +1,1 @@
-
+queryselector works only for one class or attribute at a time, if there are more than one element having same class name we have to use querySelectorAll.
