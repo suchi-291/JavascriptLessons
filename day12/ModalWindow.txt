@@ -11,3 +11,5 @@ console.log(btnsShowModal);
 for (let i = 0; i < btnsShowModal.length; i++) {
   console.log(btnsShowModal[i].textContent);
 }
+
+For multiple classes we can use .classlist method.. for class lists there are a couple of methods, like .remove etc to manipulate classes.
