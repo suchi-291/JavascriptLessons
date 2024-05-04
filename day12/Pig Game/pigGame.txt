@@ -1,3 +1,5 @@
 DOM Manipulation and Events
 
 
+We can use getElementsById('id') for querySelector('#id')
+Both of them work the same way but the getElementById gets the element faster, so cases where we will have to call more elements using ID, getelementById selector.
