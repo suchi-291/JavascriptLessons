@@ -27,6 +27,16 @@ for (let i = 0; i < btnsShowModal.length; i++) {
   btnsShowModal[i].addEventListener('click', showModal);
 }
 
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+Even for keyboard events we still need to use "addEventistener"
+when we say document.addEventListener - We are listening to events occuring anywhere on the web page. 
+
+
+
+
 const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
