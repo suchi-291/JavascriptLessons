@@ -32,7 +32,7 @@ for (let i = 0; i < btnsShowModal.length; i++) {
 
 
 Even for keyboard events we still need to use "addEventistener"
-when we say document.addEventListener - We are listening to events occuring anywhere on the web page. 
+when we say document.addEventListener - We are listening for events everywhere on the web page. No matter where they happen on the page they will always trigger the event handler that we specify. 
 
 
 
