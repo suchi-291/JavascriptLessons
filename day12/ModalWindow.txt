@@ -34,11 +34,15 @@ for (let i = 0; i < btnsShowModal.length; i++) {
 Even for keyboard events we still need to use "addEventistener"
 when we say document.addEventListener - We are listening for events everywhere on the web page. No matter where they happen on the page they will always trigger the event handler that we specify. 
 
+There are three types of events for a keyboard: key up, key press and key down
+The information about which key is pressed is stored in the event, when a key is pressed. Whenever an event occurs javascript will create an object containing information about all the event and that object can be accessed through the event handler function.
 
+By using this object we can customize the code by pointing out which key we want, for the reaction to the event should occur.
 
-
-const closeModal = function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
-};
-
+ocument.addEventListener('keydown', function (eventInfo) {
+  //console.log('A Key was pressed');
+  //console.log(eventInfo.key);
+  if (eventInfo.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
