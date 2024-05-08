@@ -41,3 +41,45 @@ const firstName = 'Suchitha';
 calcAge(1991);
 //printAge();
 //console.log(age);
+
+//HOISTING IN PRACTICE
+
+//<Hoisintg with Variables>
+
+//console.log(me);--------->//when declared with var, it allowed hoisting but the value is undefined
+//console.log(job);---------->//The variable 'job' can not be hoisted before it's declaration because it was declared with the keyword Let, and currently the variable is in Temporal Dead Zone
+//console.log(year);---------->//The variable 'year' can not be hoisted before it's declaration because it was declared with the keyword const, and currently the variable is in Temporal Dead Zone
+
+var me = 'Suchi';
+let job = 'Developer';
+const year = 2024;
+
+//<Hoisting with Functions>
+
+console.log(adding(1, 2));
+//console.log(addValues(1, 2));
+//console.log(addThem(1, 2));
+console.log(addThem);
+console.log(addValues);
+
+function adding(a, b) {
+  return a + b;
+}
+
+/*const let*/ var addValues = function (a, b) {
+  return a + b;
+};
+
+/*const let*/ var addThem = (a, b) => a + b;
+
+// Example
+if (!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+function deleteShoppingCart() {
+  console.log('All products deleted');
+}
+
+var x = 2;
+let y = 3;
+const z = 4;
