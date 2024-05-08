@@ -1,0 +1,1 @@
+Variable scoping and hoisting in practice 
