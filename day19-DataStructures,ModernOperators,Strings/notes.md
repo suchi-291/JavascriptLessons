@@ -49,7 +49,7 @@ rest2.numGuests ||= 10;
 console.log(rest1.numGuests, rest2.numGuests);
 ```
 
-This would work perfectly fine till the value 0 happens to come into picture, suppose the value of numGuests = 0 instead of 20 in rest1 object, then the assignment happens unnecessarily, we would not want that at such times, ==nullish assignment operator helps==
+This would work perfectly fine till the value 0 happens to come into picture, suppose the value of numGuests = 0 instead of 20 in rest1 object, then the assignment happens unnecessarily, we would not want that at such times, **nullish assignment operator helps**
 
 2. Logical NULLISH Assignment Operator ??= :
 
@@ -105,4 +105,4 @@ console.log(rest4); // output: {name: 'La Piazza', owner: 'Anonymous'}
 console.log(rest3); //
 ```
 
-==This techniques can be used when a variable is already defined and is truthy==
+**This techniques can be used when a variable is already defined and is truthy**
