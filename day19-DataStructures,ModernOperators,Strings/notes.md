@@ -105,4 +105,27 @@ console.log(rest4); // output: {name: 'La Piazza', owner: 'Anonymous'}
 console.log(rest3); //
 ```
 
-== This techniques can be used when a variable is already defined and is truthy ==
+** This techniques can be used when a variable is already defined and is truthy **
+
+## Looping Arrays For-of Loop
+
+Introduced in ES6
+
+- This loop will automatically loop over entire array and in each iteration it will give us access to the current array element
+
+- With this method we do not have to worry about the counter and all the conditions, And here we can use 'continue' and 'Break' Statements.
+
+```js
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+/* Output:
+Focaccia
+Bruschetta
+Garlic Bread
+Caprese Salad
+Pizza
+Pasta
+Risoto*/
+```
