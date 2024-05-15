@@ -4,7 +4,7 @@ Log - 15-05-24
 
 - [x] Logical Assignment Operators
 - [x] Coding Challenge #1
-- [ ] Looping Arrays: The for-of Loop
+- [x] Looping Arrays: The for-of Loop
 - [ ] Enhanced Object Literals
 - [ ] Optional Chaining (?.)
 - [ ] Looping Objects: Object Keys, Values, and Entries
@@ -129,3 +129,24 @@ Pizza
 Pasta
 Risoto*/
 ```
+
+- The main drwaback is finding out the index of each item is a little complicated
+
+```js
+for (const item of menu.entries()) {
+  console.log(item);
+}
+
+/*
+(2) [0, 'Focaccia']
+(2) [1, 'Bruschetta']
+(2) [2, 'Garlic Bread']
+(2) [3, 'Caprese Salad']
+(2) [4, 'Pizza']
+(2) [5, 'Pasta']
+(2) [6, 'Risoto']
+*/
+```
+
+- .entries() is an array iterator
+  It gives a new array which in each position contains a new array that has [elementIndex, element]
