@@ -48,3 +48,31 @@ rest2.numGuests ||= 10;
 
 console.log(rest1.numGuests, rest2.numGuests);
 ```
+
+This would work perfectly fine till the value 0 happens to come into picture, suppose the value of numGuests = 0 instead of 20 in rest1 object, then the assignment happens unnecessarily, we would not want that at such times, ==nullish assignment operator helps==
+
+```js
+const rest1 = {
+  name: 'Capri',
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+//rest1.numGuests = rest1.numGuests || 10;
+//rest2.numGuests = rest2.numGuests || 10;
+
+//rest1.numGuests ||= 10; // Wrong Output
+//rest2.numGuests ||= 10;
+
+//console.log(rest1.numGuests, rest2.numGuests); //Output: 10 10 instead of 0 10
+
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+console.log(rest1); //output: {name: 'Capri', numGuests: 0}
+console.log(rest2); // output: {name: 'La Piazza', owner: 'Giovanni Rossi', numGuests: 10}
+```
