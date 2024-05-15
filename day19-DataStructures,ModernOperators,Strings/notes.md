@@ -105,4 +105,4 @@ console.log(rest4); // output: {name: 'La Piazza', owner: 'Anonymous'}
 console.log(rest3); //
 ```
 
-**This techniques can be used when a variable is already defined and is truthy**
+**This technique can be used when a variable is already defined and is truthy**
