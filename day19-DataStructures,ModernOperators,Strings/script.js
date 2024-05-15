@@ -120,3 +120,6 @@ for (const [i, el] of menu.entries()) {
 }
 
 //.entries() is an array iterator
+
+//ENHANCED OBJECT LITERAL
+
