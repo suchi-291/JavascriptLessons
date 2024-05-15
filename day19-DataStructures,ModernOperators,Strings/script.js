@@ -1,74 +1,122 @@
 'use strict';
-
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risoto'],
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, //24 hours open
+      close: 24,
+    },
+  },
 
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
-// Destructuring is an ES6 feature, it is a way of unpacking values from an array or object into separate variables
+//LOGICAL ASSIGNMENT OPERATORS
 
-// Destructuring is to break a complex data structure down to a simpler data structure
+//OR ASSIGNMENT OPERATOR
 
-const arr = [2, 3, 4];
-const a = arr[0];
-const b = arr[1];
-const c = arr[2];
-console.log(a, b, c);
-// This is how we normally separate the elements in array if we want to up untill now
+//Consider the below example, suppose we got data of rest1, rest2 from an API, we wnat to access the numGuests property from these objects, but since the objects were retrieved from an API, they could be missing the property numGuests, fro usch objects we want them to include numGuests property but with a defaul value....
 
-const [x, y, z] = arr;
-console.log(x, y, z);
-// We will get the same result that we wanted before, we didnt declare each variable separately
+// This can be achieved using shortCircuiting
 
-// Suggested to declare using const while destructuring
+const rest1 = {
+  name: 'Capri',
+  numGuests: 0,
+};
 
-//const [first, second] = restaurant.categories;
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
 
-//console.log(first, second);
+//rest1.numGuests = rest1.numGuests || 10;
+//rest2.numGuests = rest2.numGuests || 10;
 
-let [main, , secondary] = restaurant.categories;
-console.log(main, secondary);
-//If I wanted to swap the first(main) and third(secondary) as the main and secondary categories, this would be how I would have done it
+//rest1.numGuests ||= 10;
+//rest2.numGuests ||= 10;
 
-/*const temp = main;
-main = secondary;
-secondary = temp;
+//console.log(rest1.numGuests, rest2.numGuests);
 
-console.log(main, secondary);*/
+//NULLISH ASSIGNMENT OPERATOR - 0, '' are true, (null, undefined are falsy)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
 
-//With out using a new 'temp' variable, the same can be done using destructuring
+console.log(rest1.numGuests, rest2.numGuests);
+console.log(rest1);
+console.log(rest2);
 
-[main, secondary] = [secondary, main];
+//LOGICAL && ASSIGNMENT OPERATOR
 
-console.log(main, secondary);
+// Using &&= operator we can change the already existing values to what we want
 
-console.log(restaurant.order(1, 2));
+const rest3 = {
+  name: 'Capri',
+  numGuests: 0,
+};
 
-const [starter, mainItem] = restaurant.order(1, 2);
+const rest4 = {
+  name: 'La Piazza',
+  owner: 'Ratatoulie',
+};
 
-console.log(starter, mainItem);
+//rest3.owner = rest3.owner && '<Anonymous>'
+//rest4.owner = rest4.owner && '<Anonymous>';
+//console.log(rest3);//output: {name: 'Capri', numGuests : 0, owner: undefined}
+//console.log(rest4); //ouptut: {
+// output: {name: 'La Piazza', owner: 'Anonymous'}
+rest3.owner &&= '<Anonymous>';
+rest4.owner &&= '<Anonymous>';
+console.log(rest4); // output: {name: 'La Piazza', owner: 'Anonymous'}
+console.log(rest3); // output: {name: 'Capri', numGuests: 0}
 
-// Destructuring a nested Array, for this we have to do destructuring inside destructuring
+//LOOPING ARRAYS - FOR OF LOOP
 
-const nested = [2, 4, [5, 6]];
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-//const [i, , j] = nested;
-//console.log(i, j);
+for (const item of menu) console.log(item);
 
-const [i, , [j, k]] = nested;
+// This loop will automatically loop over entire array and in each iteration it will give us access to the current array element
 
-console.log(i, j, k);
+// With this method we do not have to worry about the counter and all the conditions, And here we can use 'continue' and 'Break' Statements.
 
-// Default values
+for (const item of menu.entries()) {
+  //console.log(item);
+  console.log(`${item[0] + 1}: ${item[1]}`);
+}
 
-const [p = 1, q = 1, r = 1] = [8, 9];
-console.log(p, q, r);
+for (const [i, el] of menu.entries()) {
+  //console.log(item);
+  console.log(`${i + 1}: ${el}`);
+}
 
-//This is very usefule when we are getting data from API
+//.entries() is an array iterator
