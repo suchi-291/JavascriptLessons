@@ -5,7 +5,7 @@ Log - 15-05-24
 - [x] Logical Assignment Operators
 - [x] Coding Challenge #1
 - [x] Looping Arrays: The for-of Loop
-- [ ] Enhanced Object Literals
+- [x] Enhanced Object Literals
 - [ ] Optional Chaining (?.)
 - [ ] Looping Objects: Object Keys, Values, and Entries
 - [ ] Coding Challenge #2
@@ -150,3 +150,53 @@ for (const item of menu.entries()) {
 
 - .entries() is an array iterator
   It gives a new array which in each position contains a new array that has [elementIndex, element]
+
+## Enhanced Object Literal
+
+1. We can omit the property ame if variable name matches property name.
+
+```js
+let name = 'John';
+let age = 30;
+
+// ES5
+let person = {
+  name: name,
+  age: age,
+};
+
+// ES6
+let person = { name, age };
+```
+
+2. We can omit the function keyword when defining methods in objects.
+
+```js
+// ES5
+let obj = {
+  foo: function () {
+    console.log('Hello');
+  },
+};
+
+// ES6
+let obj = {
+  foo() {
+    console.log('Hello');
+  },
+};
+```
+
+3. We can use an expression as a property name in an object literal.
+
+```js
+// Computed property name
+let prop = 'name';
+let person = {
+  [prop]: 'John Doe',
+  ['age' + 1]: 30,
+  ['isAdult']: true,
+};
+
+console.log(person); // Output: { name: 'John Doe', age1: 30, isAdult: true }
+```
