@@ -6,7 +6,7 @@ Log - 17-05-24
 - [x] Coding Challenge #1
 - [x] Looping Arrays: The for-of Loop
 - [x] Enhanced Object Literals
-- [ ] Optional Chaining (?.)
+- [x] Optional Chaining (?.)
 - [ ] Looping Objects: Object Keys, Values, and Entries
 - [ ] Coding Challenge #2
 - [ ] Sets
@@ -19,5 +19,18 @@ Log - 17-05-24
 
 ---
 
-## Optional Chaining
+## Optional Chaining (?.)
 
+- Optional chaining is a feature of Arrays and Objects
+
+- When we use, If certain property of an object does not exist, then undefined will be outputted immediately.
+
+**Note:** Like the nullish operator, the property is said to exist as long as it is neither null nor undefined
+
+- We can have multiple optional chaining
+
+- Both **OPtional Chaining operator** and the **Nullish Coalesing Operator** work well together and were introduced in ES2020
+
+- Optional Chaining works well for methods as well. i;e., We can check whether a method exists before we call it.
+
+- It works on **Arrays** as well, it checks if an array is empty.
