@@ -29,7 +29,7 @@ Log - 17-05-24
 
 - We can have multiple optional chaining
 
-- Both **OPtional Chaining operator** and the **Nullish Coalesing Operator** work well together and were introduced in ES2020
+- Both **Optional Chaining operator** and the **Nullish Coalesing Operator** work well together and were introduced in ES2020
 
 - Optional Chaining works well for methods as well. i;e., We can check whether a method exists before we call it.
 
