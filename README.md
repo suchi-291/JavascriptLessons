@@ -1,5 +1,6 @@
 # JavascriptLessons
-All the javascript course material that gets you ready to learn frameworks
+All the javascript course material that gets you ready to learn frameworks from Mastering Javascript by Jonas Schmedtmann.
+[Course link](https://www.udemy.com/course/the-complete-javascript-course/)
 
 | Day | Topics | link |
 |-----|--------|------|
