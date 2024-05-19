@@ -12,7 +12,7 @@ Log - 19-05-24
 - [x] Sets
 - [x] Maps: Fundamentals
 - [x] Maps: Iteration
-- [ ] Which Data Structure to use when
+- [x] Which Data Structure to use when
 - [ ] Coding Challenge #3
 - [ ] Working with Strings
 - [ ] String Methods Practice
@@ -153,7 +153,7 @@ Reason: It uses the same formatting as Javascript objects and arrays.
 
 **Non-built-in DataStructures-** Stacks, Queues, Linked lists, Trees, Hash tables, etc
 
-### ARRAYS VS SETS
+### Arrays VS Sets
 
 | Arrays                                                                   | Sets                                                        |
 | ------------------------------------------------------------------------ | ----------------------------------------------------------- |
@@ -161,11 +161,13 @@ Reason: It uses the same formatting as Javascript objects and arrays.
 | Use Arrays when we need to manipulate data                               | We can use Sets when **High Performance** is very important |
 |                                                                          | Sets are used to remove duplicate values from Arrays        |
 
-### OBJECTS VS MAPS
+### Objects VS Maps
 
-| Objects                                         | Maps                                |
-| ----------------------------------------------- | ----------------------------------- |
-| Storing in traditional key/value pairs          | For Better performance              |
-| Easier to write and access values with . and [] | In Maps, Keys can have an Data type |
-|                                                 | Easy to iterate                     |
-|                                                 | Easy to compute size                |
+| Objects                                                        | Maps                                             |
+| -------------------------------------------------------------- | ------------------------------------------------ |
+| Storing in traditional key/value pairs                         | For Better performance                           |
+| Easier to write and access values with . and []                | In Maps, Keys can have an Data type              |
+|                                                                | Easy to iterate                                  |
+|                                                                | Easy to compute size                             |
+| When we need to include functions(methods)                     | Only when we need to map key to values           |
+| Objects can be used when working with JSON(can convert to map) | Use Maps when we need keys which are not strings |
