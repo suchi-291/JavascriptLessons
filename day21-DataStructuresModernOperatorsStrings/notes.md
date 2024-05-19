@@ -1,6 +1,6 @@
 # Data Structures, Modern Operators and Strings
 
-Log - 18-05-24
+Log - 19-05-24
 
 - [x] Logical Assignment Operators
 - [x] Coding Challenge #1
@@ -140,3 +140,21 @@ This structure looks same as that of the structure we get after using Object.ent
 **If Key-Value pairs are required** - Objects/Maps
 
 - In Objects or Maps we can describe the values
+
+Most of the modern Data comes from Web API
+
+The data that comes from a Web API is in **JSON** format
+JSON looks like a string, but it can be easily converted in to Javascript Objects
+Reason: It uses the same formatting as Javascript objects and arrays.
+
+**Note**: A very common kind of data we work on in Javascript mostly is an array of objects.
+
+**Other built-in DataStructures-** WeakMap and WeakSet
+
+**Non-built-in DataStructures-** Stacks, Queues, Linked lists, Trees, Hash tables, etc
+
+| Arrays                                                                   | Sets                                                      |
+| ------------------------------------------------------------------------ | --------------------------------------------------------- |
+| Use it when we need ordered list of values and duplicates are acceptable | Use it when we need to work with unique values            |
+| Use Arrays when we need to manipulate data                               | We can use Sets when \*High Performance is very important |
+|                                                                          | Sets are used to remove duplicate values from Arrays      |
