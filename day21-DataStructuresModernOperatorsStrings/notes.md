@@ -156,5 +156,5 @@ Reason: It uses the same formatting as Javascript objects and arrays.
 | Arrays                                                                   | Sets                                                      |
 | ------------------------------------------------------------------------ | --------------------------------------------------------- |
 | Use it when we need ordered list of values and duplicates are acceptable | Use it when we need to work with unique values            |
-| Use Arrays when we need to manipulate data                               | We can use Sets when \*High Performance is very important |
+| Use Arrays when we need to manipulate data                               | We can use Sets when **High Performance** is very important |
 |                                                                          | Sets are used to remove duplicate values from Arrays      |
