@@ -153,8 +153,19 @@ Reason: It uses the same formatting as Javascript objects and arrays.
 
 **Non-built-in DataStructures-** Stacks, Queues, Linked lists, Trees, Hash tables, etc
 
-| Arrays                                                                   | Sets                                                      |
-| ------------------------------------------------------------------------ | --------------------------------------------------------- |
-| Use it when we need ordered list of values and duplicates are acceptable | Use it when we need to work with unique values            |
+### ARRAYS VS SETS
+
+| Arrays                                                                   | Sets                                                        |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| Use it when we need ordered list of values and duplicates are acceptable | Use it when we need to work with unique values              |
 | Use Arrays when we need to manipulate data                               | We can use Sets when **High Performance** is very important |
-|                                                                          | Sets are used to remove duplicate values from Arrays      |
+|                                                                          | Sets are used to remove duplicate values from Arrays        |
+
+### OBJECTS VS MAPS
+
+| Objects                                         | Maps                                |
+| ----------------------------------------------- | ----------------------------------- |
+| Storing in traditional key/value pairs          | For Better performance              |
+| Easier to write and access values with . and [] | In Maps, Keys can have an Data type |
+|                                                 | Easy to iterate                     |
+|                                                 | Easy to compute size                |
