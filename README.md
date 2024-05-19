@@ -23,4 +23,5 @@ All the javascript course material that gets you ready to learn frameworks from 
 | Day18 | ES-6 Spread operator, rest patterns, Short circuiting, nullish Coalescing operator |[link](https://github.com/suchi-291/JavascriptLessons/tree/3d0f60e6e870fdc52ddfad813e774527ce3f00a3/day18)|
 | Day19 | ES-6 Modern assignment operators, looping arrays |[link](https://github.com/suchi-291/JavascriptLessons/tree/3d0f60e6e870fdc52ddfad813e774527ce3f00a3/day19-DataStructures%2CModernOperators%2CStrings) |
 | Day20 |  ES-6 Looping objects|[link](https://github.com/suchi-291/JavascriptLessons/tree/3d0f60e6e870fdc52ddfad813e774527ce3f00a3/day20-DataStructuresModernOperatorsStrings) |
+| Day21 |  ES-6 Sets, Maps, Working with Strings|[link](https://github.com/suchi-291/JavascriptLessons/tree/113e0a7f1ba808833941ff27cc6623db7bf24825/day21-DataStructuresModernOperatorsStrings) |
 
