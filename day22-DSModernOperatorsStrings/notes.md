@@ -38,9 +38,24 @@ Log - 20-05-24
 7. when a negative index is passed, then it outputs from the string backwards, it starts from -1.
 
 8. Except the .length, .indexOf() method all the string methods return a string, which we will have to store in a variable or a Data Structure.
+9. **.toLowerCase()** - converts the stirng to lower case
+10. **.toUpperCase()** - converts te string to uppercase.
+11. **.trim()** - removes spaces. **.trimStart()** removes space from the starting, **.trimEnd()** removes space from the end of a string.
+
+12. **.replace(chararcter/wordinString, ch/wordWeWantToReplace)** - replaces character or word from string. But just like how we can find the occurence of character or word, similarly only the first occurence of the character or the word gets replaced.
+
+13. **.ReplaceAll(i,j)** replaces the characters or words at all the places.
+
+14. **.includes()** returns a boolean by checking if the character or the word existd in the string.
+
+15. **.startsWith()** returns boolean by checking if the string starts with the given character or word.
+
+16. **.endsWith()** returns boolean by checking if the string ends with the given character or word.
 
 **Behind the Scenes**
 
 Since the strings are primitive values they should not be having methods.
 
 What really happens behind the scenes is that whenever we call methods, Javascript converts the string primitive to string object. And upon that objects the methods are called.
+
+**Note:** It is recommended that the user input string be converted into lower case and then other methods be performed on it.
