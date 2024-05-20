@@ -104,3 +104,53 @@ const checkBaggage = function (items) {
 checkBaggage('I have a laptop, some Food and a pocket Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Get some snacks and a gun for protection');
+
+//.split() method
+
+console.log('a+very+nice+string'.split('+'));
+console.log('Suchitha Ramachandrapurapu'.split(' '));
+
+const [firstName, lastName] = 'Suchitha Ramachandrapurapu'.split(' ');
+
+console.log(firstName);
+console.log(lastName);
+
+// .join() method
+const newName = ['Ms.', firstName, lastName.toUpperCase()].join(' ');
+
+console.log(newName);
+
+// Practice Application - creating a function to capitalize names
+
+//mysolution
+const capitalizeName = function (name) {
+  const newArray = [];
+  const lowerCase = name.toLowerCase();
+  const array = lowerCase.split(' ');
+  for (let i of array) {
+    const z = i.replace(i[0], i[0].toUpperCase());
+    newArray.push(z);
+  }
+
+  console.log(newArray.join(' '));
+};
+
+capitalizeName('suchitha ramachandrapurapu');
+
+capitalizeName('rama lakshmana bharatha shatrugna');
+
+// Jonas Solution
+
+const capitalizeName2 = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+
+  console.log(namesUpper.join(' '));
+};
+
+capitalizeName('likhitha ramachandrapurapu');
+
+capitalizeName('dharma arjuna bheema nakula sahadeva');

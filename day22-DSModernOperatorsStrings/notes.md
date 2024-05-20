@@ -38,8 +38,11 @@ Log - 20-05-24
 7. when a negative index is passed, then it outputs from the string backwards, it starts from -1.
 
 8. Except the .length, .indexOf() method all the string methods return a string, which we will have to store in a variable or a Data Structure.
+
 9. **.toLowerCase()** - converts the stirng to lower case
+
 10. **.toUpperCase()** - converts te string to uppercase.
+
 11. **.trim()** - removes spaces. **.trimStart()** removes space from the starting, **.trimEnd()** removes space from the end of a string.
 
 12. **.replace(chararcter/wordinString, ch/wordWeWantToReplace)** - replaces character or word from string. But just like how we can find the occurence of character or word, similarly only the first occurence of the character or the word gets replaced.
@@ -51,6 +54,14 @@ Log - 20-05-24
 15. **.startsWith()** returns boolean by checking if the string starts with the given character or word.
 
 16. **.endsWith()** returns boolean by checking if the string ends with the given character or word.
+
+17. **.split()** allows us to divide a string into multiple parts based on a divider string. Then the elements will be stored in an array, so basically an array is returned.
+
+```js
+console.log('a+very+nice+string'.split('+'));
+```
+
+18. **.joint()** method is the opposite method of **.split()**, we can join array of strings with a divider string.
 
 **Behind the Scenes**
 
