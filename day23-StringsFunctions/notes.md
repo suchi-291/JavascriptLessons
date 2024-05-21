@@ -1,6 +1,6 @@
 # Data Structures, Modern Operators and Strings
 
-Log - 20-05-24
+Log - 21-05-24
 
 - [x] Logical Assignment Operators
 - [x] Coding Challenge #1
@@ -14,8 +14,8 @@ Log - 20-05-24
 - [x] Maps: Iteration
 - [x] Which Data Structure to use when
 - [x] Coding Challenge #3
-- [ ] Working with Strings
-- [ ] String Methods Practice
+- [x] Working with Strings
+- [x] String Methods Practice
 
 ---
 
@@ -72,3 +72,9 @@ What really happens behind the scenes is that whenever we call methods, Javascri
 **Note:** It is recommended that the user input string be converted into lower case and then other methods be performed on it.
 
 18. **Padding a String:** To add a number of characters to a string untill the string has the desired length.
+
+Syntax: myStr.padStart(size,<dividerstring>) || myStr.padEnd(size,<dividerstring>)
+
+How this works is , if I want my string to be some n charcaters length, but the user input is not n, then I can pad the string with a divider string and make it the size I require.
+
+19. **.repeat()** function is used to repeat a string, no.of times the repitition should occur is passed in as the argument.

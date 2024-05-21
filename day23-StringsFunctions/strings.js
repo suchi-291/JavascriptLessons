@@ -158,4 +158,28 @@ capitalizeName('dharma arjuna bheema nakula sahadeva');
 // padding a string
 
 const message = 'Go to gate 23!';
-console.log(message.padStart());
+console.log(message.padStart(25, '+').padEnd(35, '+'));
+console.log('Suchitha'.padStart(25, '+'));
+
+// Application - Mask credit card number
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(111111111111));
+console.log(maskCreditCard('123456789012'));
+
+// Repeat
+
+const message3 = 'Bad weather... All Departures Delayed.. ';
+console.log(message3.repeat(5));
+
+const planesInLine = function (n) {
+  console.log(`There are ${n} planes in Line ${'✈️'.repeat(n)}`);
+};
+
+planesInLine(5);
+planesInLine(9);
