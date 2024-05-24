@@ -90,5 +90,27 @@ const hello = function(){
 document.body.addEventListener('click', hello);
 
 
+
 // Functions returning Functions
+//Incase of returning funtions, they are going to have arguments.
+const greet = function(greeting){
+  return function(name){
+    console.log(`${greeting} ${name}`)
+  }
+}
+
+const greeterHey = greet('Hey'); /// The greet function here, it is returning a function, when I saved this into the greeter Hey variable it's like I am equating a function expression into greeterHey, so now greeterHey would act like the function which I have defined like a function expression in the greet function, return statement.
+greeterHey('Suchi');
+greeterHey('Harry');
+
+// This also works like this
+
+greet('Hello')('Boo');
+
+const sayHello = (greeting) =>
+  (name)=> console.log(`${greeting} ${name}`);
+
+sayHello('Hi Babe')('..');
+
+// Call and Apply Methods
 
