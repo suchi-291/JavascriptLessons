@@ -3,9 +3,9 @@
 log - 23-05-24
 
 - [x] - Default Parameters
-- [ ] - How passing arguments work: Value vs Reference
-- [ ] - First-Class and Higher-Order Functions
-- [ ] - Functions Accepting Callback Functions
+- [x] - How passing arguments work: Value vs Reference
+- [x] - First-Class and Higher-Order Functions
+- [x] - Functions Accepting Callback Functions
 - [ ] - Functions Returning Functions
 - [ ] - The Call and Apply methods
 - [ ] - The bind Method
@@ -61,4 +61,63 @@ bookMyShow('Om Bheem Bhush', undefined, 300); //output: {movie: 'Om Bheem Bhush'
 ```
 
 ## How Passing Arguments Works: Value vs. Reference
+
+When primitive values are passed in as arguments, it will be a copy of the original value.
+When we are passing object values inside the function it means we are passing reference to the object in the memory
+
+We are basically creating copies, but for primitive value copy gets created and a new memory gets used. But for the object - reference type, the copy also will point to the same reference address so the object value will get changed.
+
+- If we dont keep this in mind, and send objects as arguments and maake changes to their values, there can be serious consequences.
+
+- **Passing by Value**, **Passing by Reference** ---> It could be confusing when hearing such statements, but in javascript, all we have is ***Passing by Values***, not passing by reference.
+
+## First Class and Higher-Order Functions
+
+Js has First class functions i.e., we can use functions as variables, we can pass them into functions, call them inside functions and even return from a function, this allows us to write higher - order functions. 
+
+- Js treats functions as values.
+- Js treats functions as values just because they are just another type of **object**.
+- Since functions are values we can do lot of things we can do with them like
+1. Storing them in variables or in objects as object properties.
+2. We can pass functions as arguments into other functions
+3. Return a function from another function
+4. Since functions are also objects, they also have methods.
+
+
+### Higher Order Function
+ 
+ It is a function that recieves another function as an argument and then returns a new function or both.
+
+ Ex. Event handler function - .addEventListener(click, taskFunction)
+
+ taskFunction here is called as **CallBack function**. It is called as so, because the Higher order function calls this function later.
+
+
+ Note: There is no first-class function in practice - It is just a concept/feature that all the functions are treated as values.
+
+## Functions accepting Callback functions - (HIGHER ORDER FUNCTIONS)
+
+```js
+
+// Higher order function
+const transformer = function (str, fn){
+  console.log(str);
+  console.log(`Transformed String: ${fn(str)}`);// Inside the higher order function, here we are passing arguments instead, this function used as the argument in the higher-order function can use another argument which is being passed in the higher-order function.
+
+  //Since functions are objects, they also have methods, for instance .name method gives the name of the function
+
+  console.log(`Transformed by: ${fn.name}`);
+
+}
+
+transformer('Javascript is relatively easy for a beginner', upperFirstWord);//Observe how no arguments are being passed in to upperFirstWord function. 
+
+transformer('Javascript is relatively easy for a beginner', oneWord);
+```
+
+- Js always uses call back functions. because it makes it easy to split up the code and keep the code interconnected with reusable parts. Another major advanctage of call back functions is that they allow us to create abstraction.
+
+- We shall encounter abstraction in a lot more details during the Object Oriented Programming.
+
+## Functions returning Functions
 
