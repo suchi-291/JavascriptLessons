@@ -26,6 +26,7 @@ All the javascript course material that gets you ready to learn frameworks from 
 | Day21 | ES-6 Sets, Maps, Working with Strings|[link](https://github.com/suchi-291/JavascriptLessons/tree/113e0a7f1ba808833941ff27cc6623db7bf24825/day21-DataStructuresModernOperatorsStrings) |
 | Day22 | ES-6 Strings|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day22-DSModernOperatorsStrings)|
 | Day23 | ES-6 Strings|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day23-StringsFunctions)|
-| Day24 | ES-6 Functions|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day24-Functions)|
-| Day25 | ES-6 Functions-2|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day25-Functions)|
+| Day24 | Functions|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day24-Functions)|
+| Day25 | Functions-2|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day25-Functions)|
+| Day26 | Functions-3| [link](https://github.com/suchi-291/JavascriptLessons/tree/5d2a7a1506cb83608895d7b0a0cd74a43d23030c/day26-Functions)|
 
