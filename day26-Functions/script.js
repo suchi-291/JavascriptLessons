@@ -22,7 +22,7 @@ runOnce();
     var notPrivate = 46;
 }
 
-console.log(isPrivate);//output - error: isPrivate not defined.
+//console.log(isPrivate);//output - error: isPrivate not defined.
 console.log(notPrivate);
 
 
@@ -41,3 +41,48 @@ const secureBooking = function(){
 
 const booker = secureBooking();
 
+
+
+// Example-1
+
+let f;
+
+
+
+const h = function(){
+    const b = 777;
+    f = function(){
+        console.log(b*2);
+    }
+}
+
+const g = function(){
+    const a = 23;
+    f = function(){
+        console.log(a*2);
+    }
+}
+
+g();
+f();
+
+// Reassigning f
+
+h();
+f();
+
+
+// Example-2 Timer
+
+const boardPassengers = function(n, wait){
+    const perGroup = Math.floor(n / 3);
+
+    setTimeout(() => {
+        console.log(`We are now boarding all ${n} passengers`);
+        console.log(`There are 3 groups, each with ${perGroup} passengers`);
+    }, wait * 1000);
+
+    console.log(`Will start boarding in ${wait} seconds`);
+}
+
+boardPassengers(100, 3);
