@@ -22,6 +22,10 @@ All the javascript course material that gets you ready to learn frameworks from 
 | Day17 | ES-6 Destructuring Objects |[link](https://github.com/suchi-291/JavascriptLessons/tree/3d0f60e6e870fdc52ddfad813e774527ce3f00a3/day17) |
 | Day18 | ES-6 Spread operator, rest patterns, Short circuiting, nullish Coalescing operator |[link](https://github.com/suchi-291/JavascriptLessons/tree/3d0f60e6e870fdc52ddfad813e774527ce3f00a3/day18)|
 | Day19 | ES-6 Modern assignment operators, looping arrays |[link](https://github.com/suchi-291/JavascriptLessons/tree/3d0f60e6e870fdc52ddfad813e774527ce3f00a3/day19-DataStructures%2CModernOperators%2CStrings) |
-| Day20 |  ES-6 Looping objects|[link](https://github.com/suchi-291/JavascriptLessons/tree/3d0f60e6e870fdc52ddfad813e774527ce3f00a3/day20-DataStructuresModernOperatorsStrings) |
-| Day21 |  ES-6 Sets, Maps, Working with Strings|[link](https://github.com/suchi-291/JavascriptLessons/tree/113e0a7f1ba808833941ff27cc6623db7bf24825/day21-DataStructuresModernOperatorsStrings) |
+| Day20 | ES-6 Looping objects|[link](https://github.com/suchi-291/JavascriptLessons/tree/3d0f60e6e870fdc52ddfad813e774527ce3f00a3/day20-DataStructuresModernOperatorsStrings) |
+| Day21 | ES-6 Sets, Maps, Working with Strings|[link](https://github.com/suchi-291/JavascriptLessons/tree/113e0a7f1ba808833941ff27cc6623db7bf24825/day21-DataStructuresModernOperatorsStrings) |
+| Day22 | ES-6 Strings|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day22-DSModernOperatorsStrings)|
+| Day23 | ES-6 Strings|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day23-StringsFunctions)|
+| Day24 | ES-6 Functions|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day24-Functions)|
+| Day25 | ES-6 Functions-2|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day25-Functions)|
 
