@@ -357,3 +357,16 @@ booker();
 - That is why even though the execution context of secureBooking() function disappeared, booker() function can access it's variable passengerCount.
 
 **Closure** - It is the Variable Environment attached to the function, exactly as it was at the time and place the function was created.
+
+- Closure is the **closed-over variable environment** of the execution context in which a function was created, even after the execution context is gone.
+
+- A closure gives a function access to all the variables of its parent function, even after that parent fucntion has returned. The function kees a reference to its outerscope, which preserves the scope chain throughout time.
+
+- A closure ensures that a function doesn't loose connection to variables that existed at the function's birth place.
+
+- A closure is like a backpack that a function carries around wherever it goes. This backpack has all the variables that were present in the environment where the function was created.
+
+- Closures are not created manually and is not a tangible object, they are a javascript feature that happens automatically. So we cannot access the closed-over variables explicitly. 
+
+- Closure can be found in the scopes: by using the function console.dir().
+
