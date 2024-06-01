@@ -74,3 +74,47 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+// SLICE METHOD
+let arr = ['a','b','c','d','e', 'f', 'g'];
+console.log(arr.slice(2));
+console.log(arr.slice(1,4));
+console.log(arr.slice(-1));
+console.log(arr.slice(-4));
+console.log(arr.slice(1,-2));
+console.log(arr.slice());
+console.log([...arr]);
+console.log(...arr);
+
+const sp = 'Winter';
+console.log(sp.slice(1,4));
+
+
+// SPLICE METHOD
+//console.log(arr.splice(2));
+console.log(arr);
+console.log(arr.splice(1,3));
+console.log(arr);
+
+
+// REVERSE METHOD
+
+const arr1 = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['j','i','h','g','f'];
+console.log(arr2.reverse());
+console.log(arr2);
+
+// CONCAT METHOD
+
+const letters = arr1.concat(arr2);
+
+console.log(letters);
+
+console.log([...arr1, ...arr2]);
+
+
+// JOIN METHOD
+
+console.log(letters.join('-'));
+
+
