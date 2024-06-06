@@ -1,14 +1,14 @@
 # Working with Arrays
 
-log - 04-06-24
+log - 06-06-24
 
 - [x] - Simple Array Methods
 - [x] - New at method
 - [x] - Looping Arrays: forEach
 - [x] - forEach with Maps and Sets
-- [ ] - Project Bankist
-- [ ] - Creating DOM elements
-- [ ] - Data Transformations: Map, Reduce, Filter
+- [x] - Project Bankist
+- [x] - Creating DOM elements
+- [x] - Data Transformations: Map, Reduce, Filter
 - [ ] - map method
 - [ ] - computing usernames
 - [ ] - filter method
@@ -123,7 +123,7 @@ currenciesUnique.forEach(function(value, key, map){
 The output is not expected, it is treating the set like a map, so we usually dont use the second parameter inside the call back function.
 
 
-## Project - Bankist App
+## Project - Bankist App (Part-1)
 
 Bankist is a minimalist banking app - an online bank interface (that uses maximum power of arrays in js)
 
@@ -190,3 +190,50 @@ To display the row inside movements div block we used DOM method .insertAdjacent
 **.insertAdjacentHTML()** - accepts two arguments - two strings, 
 - the first string is the place we want to attach html, top outside(***beforebegin***) of parent element or top inside(***afterbegin***) of parent element, bottom inside(***beforeend***) or bottom outside(***afterend***).
 - the second argumentis the strin containing html element. 
+
+## Data Transformations: map, filter, reduce
+
+The three array methods map, filter, reduce methods are used to create arrays by transforming data from other arrays.
+
+**map** - map() method is used to loop over arrays similar to forEach method, but the difference is, map creates a new array based on the original array.
+
+map method takes an array, loops over an array and in each iteration it applies a callback function we specify, to the current element.
+
+***map returns a new array containing the results of applying an operation on all original array elements***
+
+**filter** - filter() method is used to filter elements which satisy a condition from original array.
+
+***filter rreturns a new array containing the array elements that passed a specified test condition***
+
+**Reduce** - we will have an accumulator variable, reduce method loops over array elements.
+
+- in end we get a single value
+
+***reduce method boils(reduces) all array elements down to one single value (Ex.. multipying all array elements).***
+
+
+## map() method
+
+it also works like forEach only, but the relut we get is a new array
+
+```js
+// Map() method
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const euroTousd = 1.1;
+
+const movementUsd = movements.map(function(movement){
+ return movement * euroTousd;
+})
+
+console.log(movements);
+console.log(movementUsd);
+
+const movementInr = movementUsd.map((movement) => movement * 83.49);
+console.log(movementInr);
+
+/*movements.map((movement, index) => movement > 0 ? console.log(`Movement ${index + 1}: You desposited ${movement}`) : console.log(`Movement ${index + 1}: You withdrew ${Math.abs(movement)}`));*/
+
+movements.map((movement, index) => console.log(`movement ${index + 1}: You ${movement>0 ? `deposited` : `withdrew`} ${Math.abs(movement)}`));
+
+```

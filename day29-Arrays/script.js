@@ -208,3 +208,21 @@ currenciesUnique.forEach(function(value, _, map){
 
 
 
+// Map() method
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const euroTousd = 1.1;
+
+const movementUsd = movements.map(function(movement){
+ return movement * euroTousd;
+})
+
+console.log(movements);
+console.log(movementUsd);
+
+const movementInr = movementUsd.map((movement) => movement * 83.49);
+console.log(movementInr);
+
+/*movements.map((movement, index) => movement > 0 ? console.log(`Movement ${index + 1}: You desposited ${movement}`) : console.log(`Movement ${index + 1}: You withdrew ${Math.abs(movement)}`));*/
+
+movements.map((movement, index) => console.log(`movement ${index + 1}: You ${movement>0 ? `deposited` : `withdrew`} ${Math.abs(movement)}`));
