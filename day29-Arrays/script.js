@@ -61,6 +61,31 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+const displayMovements = function(movements){
+
+  containerMovements.innerHTML = '';//We want all the html tags to get included, for that reason instead of .textContent, we used innerHTML.
+  movements.forEach(function(movement, index){
+    const type = movement > 0 ? 'deposit' : 'withdrawal';
+
+      const html = `
+      <div class="movements__row">
+          <div class="movements__type movements__type--${type}">
+            ${index + 1} ${type}
+          </div>
+          
+          <div class="movements__value">${movement}</div>
+      </div>
+      `;
+
+      containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+    
+  };
+
+
+displayMovements(account1.movements);
+
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -137,7 +162,7 @@ console.log(arr.at(-1));
 
 // Suppose we wanted to print a transaction message for each movement in a bank account
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+/*const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 for(const movement of movements){
     movement > 0 ? console.log(`You desposited ${movement}`) : console.log(`You withdrew ${Math.abs(movement)}`);
@@ -179,7 +204,7 @@ const currenciesUnique = new Set(['USD', 'INR', 'USD', 'INR', 'GBP', 'GBP']);
 
 currenciesUnique.forEach(function(value, _, map){
   console.log(`${value}`);
-})
+})*/
 
 
 

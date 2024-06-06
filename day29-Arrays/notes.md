@@ -125,7 +125,7 @@ The output is not expected, it is treating the set like a map, so we usually don
 
 ## Project - Bankist App
 
-Bankist is a minimalist banking app - an online bank interface
+Bankist is a minimalist banking app - an online bank interface (that uses maximum power of arrays in js)
 
 - The app shows transactions
 - overall balance
@@ -137,3 +137,56 @@ Bankist is a minimalist banking app - an online bank interface
 ![Flow Chart image](Bankist-flowchart.png)
 
 
+Entire project, 4 actions can be performed
+
+1. User can login/logout
+2. User can transfer money
+3. User can request for loan
+4. User can close account
+
+**Login**
+User logs in by entering the credentials, if the credentials are correct then the latest updated UI should be displayed. i.e., we calculate and display the balance, we calculate and display the summary, we display transactions. We will also display a logout timer.
+
+A notable point on why we have the user data as objects instead of maps is, the real time data we obtain from the web APIs come in the form of objects.
+
+- DOM manipulation techniques in collaboration with forEach() method
+
+what's happening during login-
+
+When we are loggin in the opacity of .app selector is changed, before logging in the opacity = 0, hence we wont be able to see the entire UI covered in the main section.
+
+What we need to do?
+Display the transactions, for this inside script tag, we created a html template.
+
+we want the transactions array inside account object to get displayed in the movements container, Since we want this to happen for all the bank accounts, we need a function that does this task.
+
+so we created the function, displayMovements. this function takes movements property and for this array we created a loop using forEach. For each value in the movements array, we want to display HTML movement -row, for this we created a html template
+
+```js
+const displayMovements = function(movements){
+
+  containerMovements.innerHTML = '';//We want all the html tags to get included, for that reason instead of .textContent, we used innerHTML.
+  movements.forEach(function(movement, index){
+    const type = movement > 0 ? 'deposit' : 'withdrawal';
+
+      const html = `
+      <div class="movements__row">
+          <div class="movements__type movements__type--${type}">
+            ${index + 1} ${type}
+          </div>
+          
+          <div class="movements__value">${movement}</div>
+      </div>
+      `;
+
+      containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+    
+  };
+```
+
+To display the row inside movements div block we used DOM method .insertAdjacentHTML()
+
+**.insertAdjacentHTML()** - accepts two arguments - two strings, 
+- the first string is the place we want to attach html, top outside(***beforebegin***) of parent element or top inside(***afterbegin***) of parent element, bottom inside(***beforeend***) or bottom outside(***afterend***).
+- the second argumentis the strin containing html element. 
