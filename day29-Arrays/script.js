@@ -84,6 +84,21 @@ const displayMovements = function(movements){
 
 
 displayMovements(account1.movements);
+let userName;
+const createUsernames = function(accounts){
+  accounts.forEach(function(account){
+  account.userName = account.owner.toLowerCase().split(' ').map((word) => word[0]).join('');
+  return userName;
+});
+}
+
+createUsernames(accounts);
+
+console.log(account1.userName);
+console.log(account2.userName);
+console.log(account3.userName);
+console.log(account4.userName);
+
 
 
 /////////////////////////////////////////////////
@@ -207,7 +222,7 @@ currenciesUnique.forEach(function(value, _, map){
 })*/
 
 
-
+/*
 // Map() method
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
@@ -225,4 +240,4 @@ console.log(movementInr);
 
 /*movements.map((movement, index) => movement > 0 ? console.log(`Movement ${index + 1}: You desposited ${movement}`) : console.log(`Movement ${index + 1}: You withdrew ${Math.abs(movement)}`));*/
 
-movements.map((movement, index) => console.log(`movement ${index + 1}: You ${movement>0 ? `deposited` : `withdrew`} ${Math.abs(movement)}`));
+/*movements.map((movement, index) => console.log(`movement ${index + 1}: You ${movement>0 ? `deposited` : `withdrew`} ${Math.abs(movement)}`));*/

@@ -9,8 +9,8 @@ log - 06-06-24
 - [x] - Project Bankist
 - [x] - Creating DOM elements
 - [x] - Data Transformations: Map, Reduce, Filter
-- [ ] - map method
-- [ ] - computing usernames
+- [x] - map method
+- [x] - computing usernames
 - [ ] - filter method
 - [ ] - reduce method
 - [ ] - magic of chaining methods
@@ -236,4 +236,26 @@ console.log(movementInr);
 
 movements.map((movement, index) => console.log(`movement ${index + 1}: You ${movement>0 ? `deposited` : `withdrew`} ${Math.abs(movement)}`));
 
+```
+
+## project - Bankist (part-2)
+
+### Computing usernames
+
+We will generate username based on the owner name
+
+```js
+const createUsernames = function(accounts){
+  accounts.forEach(function(account){
+  account.userName = account.owner.toLowerCase().split(' ').map((word) => word[0]).join('');
+  return userName;
+});
+}
+
+createUsernames(accounts);
+
+console.log(account1.userName);
+console.log(account2.userName);
+console.log(account3.userName);
+console.log(account4.userName);
 ```
