@@ -35,6 +35,8 @@ const account4 = {
 
 const accounts = [account1, account2, account3, account4];
 
+
+
 // Elements
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
@@ -84,20 +86,30 @@ const displayMovements = function(movements){
 
 
 displayMovements(account1.movements);
+
+const calcDisplayBalance = function(movements) {
+  const balance = movements.reduce((acc, mov)=> acc + mov, 0);
+  labelBalance.textContent = `${balance}€ `;
+}
+
 let userName;
 const createUsernames = function(accounts){
   accounts.forEach(function(account){
   account.userName = account.owner.toLowerCase().split(' ').map((word) => word[0]).join('');
   return userName;
 });
+
 }
 
 createUsernames(accounts);
 
-console.log(account1.userName);
+//calcDisplayBalance(account2.movements);
+
+/*console.log(account1.userName);
 console.log(account2.userName);
 console.log(account3.userName);
 console.log(account4.userName);
+*/
 
 
 
@@ -111,7 +123,7 @@ console.log(account4.userName);
   ['GBP', 'Pound sterling'],
 ]);*/
 
-//const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -261,12 +273,32 @@ console.log(withdrawals);*/
 
 // Reduce Method
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-const balance = movements.reduce(function(accumulator,currentElement, index, array){
+/*const balance = movements.reduce(function(accumulator,currentElement, index, array){
   console.log(`iteration ${index + 1}: ${accumulator}`)
   return accumulator + currentElement;
 }, 0);
 
 console.log(balance);
+
+
+let balance2 = 0;
+for(const mov of movements) balance2 += mov;
+
+console.log(balance2);*/
+
+/*const balance3 = movements.reduce((acc, mov) => acc + mov, 0);
+console.log(balance3);
+*/
+
+// Maximum value using reduce method
+
+const max = movements.reduce((acc,mov) => {
+  if(acc>mov)
+    return acc
+  else
+    return mov;
+}, movements[0]);
+
+console.log(max);
 

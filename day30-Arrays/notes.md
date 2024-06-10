@@ -284,3 +284,50 @@ console.log(deposits);
 
 ## Reduce() Method
 
+- boil down an array into one sngle value.
+
+```js
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const balance = movements.reduce(function(accumulator,currentElement, index, array){
+  console.log(`iteration ${index + 1}: ${accumulator}`)
+  return accumulator + currentElement;
+}, 0);
+
+console.log(balance);
+
+```
+
+map, filter, reduce - all three array methods call a call back function for each iteration.
+
+- **.reduce()** method takes in two parameters, the first parameter is the callback function and the second parameter is the initial value of the accumulator in the first loop of iteration.
+
+We can also perform different things using reduce other than addition, like finding max value, min value, multiplication of values etc
+
+```js
+// Maximum value using reduce method
+
+const max = movements.reduce((acc,mov) => {
+  if(acc>mov)
+    return acc
+  else
+    return mov;
+}, movements[0]);
+
+console.log(max);
+
+```
+
+## project Bankist (part-3)
+
+- using reduce method, all the transaction amounts will be added and displayed in the current balance.
+
+```js
+
+const calcDisplayBalance = function(movements) {
+  const balance = movements.reduce((acc, mov)=> acc + mov, 0);
+  labelBalance.textContent = `${balance}€ `;
+}
+
+```
