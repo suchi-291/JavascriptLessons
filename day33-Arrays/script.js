@@ -87,9 +87,9 @@ const displayMovements = function(movements){
 
 
 
-const calcDisplayBalance = function(movements) {
-  const balance = movements.reduce((acc, mov)=> acc + mov, 0);
-  labelBalance.textContent = `${balance}€ `;
+const calcDisplayBalance = function(account) {
+  account.balance = account.movements.reduce((acc, mov)=> acc + mov, 0);
+  labelBalance.textContent = `${account.balance}€ `;
 }
 
 
@@ -116,6 +116,19 @@ const createUsernames = function(accounts){
 
 createUsernames(accounts);
 
+const updateUI = function(account){
+
+      // Display transactions
+      displayMovements(account.movements);
+
+      // Display Balance
+      calcDisplayBalance(account);
+      
+      // Display Summary
+      calcDisplaySummary(account);
+
+}
+
 // Event Handler
 let currentAccount;
 btnLogin.addEventListener('click', function(e){
@@ -133,18 +146,29 @@ btnLogin.addEventListener('click', function(e){
       inputLoginUsername.value = inputLoginPin.value = '';
       inputLoginPin.blur(); //blur method helps to lose focus, so after user logs in, cursor will not be visible
 
-      // Display transactions
-      displayMovements(currentAccount.movements);
-
-      // Display Balance
-      calcDisplayBalance(currentAccount.movements);
-      
-      // Display Summary
-      calcDisplaySummary(currentAccount);
+      updateUI(currentAccount);
 
   }
 });
 
+
+// MONEY TRANSFER IMPLEMENTATION
+
+btnTransfer.addEventListener('click', function(e){
+  e.preventDefault();
+  const amount = Number(inputTransferAmount.value);
+  const recieverAcc = accounts.find(acc => acc.userName === inputTransferTo.value);
+  inputTransferAmount.value = inputTransferTo.value = '';
+  
+  if(recieverAcc && amount > 0 && currentAccount.balance >= amount && recieverAcc?.userName !== currentAccount.userName){
+        //Doing transfer
+        currentAccount.movements.push(-amount);
+        recieverAcc.movements.push(amount);
+
+        updateUI(currentAccount);
+
+  }
+});
 
 
 /////////////////////////////////////////////////
