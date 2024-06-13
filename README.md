@@ -29,4 +29,10 @@ All the javascript course material that gets you ready to learn frameworks from 
 | Day24 | Functions|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day24-Functions)|
 | Day25 | Functions-2|[link](https://github.com/suchi-291/JavascriptLessons/tree/7a11bd0387179fd88d21b23a4a5507c82edc01f2/day25-Functions)|
 | Day26 | Functions-3| [link](https://github.com/suchi-291/JavascriptLessons/tree/5d2a7a1506cb83608895d7b0a0cd74a43d23030c/day26-Functions)|
-
+|Day27 | Arrays | [link](https://github.com/suchi-291/JavascriptLessons/tree/8ea9b24938799b7c3da8bb95ec25c91e5f365754/day27-Arrays) |
+|Day28 | Arrays | [link](https://github.com/suchi-291/JavascriptLessons/tree/8ea9b24938799b7c3da8bb95ec25c91e5f365754/day28-Arrays) |
+|Day29 | Arrays | [link](https://github.com/suchi-291/JavascriptLessons/tree/8ea9b24938799b7c3da8bb95ec25c91e5f365754/day29-Arrays) |
+|Day30 | Arrays | [link](https://github.com/suchi-291/JavascriptLessons/tree/8ea9b24938799b7c3da8bb95ec25c91e5f365754/day30-Arrays) |
+|Day31 | Arrays | [link](https://github.com/suchi-291/JavascriptLessons/tree/8ea9b24938799b7c3da8bb95ec25c91e5f365754/day31-Arrays) |
+|Day32 | Arrays | [link](https://github.com/suchi-291/JavascriptLessons/tree/8ea9b24938799b7c3da8bb95ec25c91e5f365754/day32-Arrays) |
+|Day33 | Arrays | [link](https://github.com/suchi-291/JavascriptLessons/tree/8ea9b24938799b7c3da8bb95ec25c91e5f365754/day33-Arrays) |
