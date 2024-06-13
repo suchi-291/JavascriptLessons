@@ -512,3 +512,45 @@ const calcDisplayBalance = function(account) {
 
 ```
 
+## Find Index() Method
+
+Find index works just like find() method but it returns the index of the element
+When using indexOf method, we need to send the value, but in findIndex we can send in a complex condition to retrieve the index of array element that we require.
+
+
+## Project Bankist (part-7)
+
+**Implementation of close account feature using findIndex() method**
+ 
+ Closing accounts means, to delete the account object from the accounts array
+
+ Inorder to delete an element from an array, the first go to array method would be the splice() method, this method requires the index of the element we want to remove.
+
+ splice() method will also mutate the original array.
+
+
+```js
+btnClose.addEventListener('click', function(e){
+  e.preventDefault();
+  
+  const closerAcc = accounts.find(acc => acc.userName === inputCloseUsername.value);
+  
+  if(closerAcc.userName === currentAccount.userName && closerAcc.pin === Number(inputClosePin.value)){    
+    const index = accounts.findIndex(acc => acc.userName === currentAccount.userName);
+    //Delete account
+    accounts.splice(index, 1);//Original array will also get mutated
+    // Hide UI
+    containerApp.style.opacity = 0;
+    labelWelcome.textContent = `Login to get started`;
+      
+  }
+
+  inputCloseUsername.value = inputClosePin.value = '';
+  
+
+})
+
+```
+
+**Note**- Both the find, findIndex() method accept element, index, array as parameters
+

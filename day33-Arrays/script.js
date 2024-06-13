@@ -35,7 +35,7 @@ const account4 = {
 
 const accounts = [account1, account2, account3, account4];
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Elements
 const labelWelcome = document.querySelector('.welcome');
@@ -63,6 +63,10 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// Functions
 const displayMovements = function(movements){
 
   containerMovements.innerHTML = '';//We want all the html tags to get included, for that reason instead of .textContent, we used innerHTML.
@@ -129,13 +133,18 @@ const updateUI = function(account){
 
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Event Handler
+
+
+// LOGIN IMPLEMENTATION
+
 let currentAccount;
 btnLogin.addEventListener('click', function(e){
   //Prevents form from submitting
   e.preventDefault(); 
   currentAccount = accounts.find(acc => acc.userName === inputLoginUsername.value);
-  console.log(currentAccount);
   //usecase of optional chaining can be seen here, so we are basically checking if the current account exists, if it exists then only we will check if the pin matches
   if(currentAccount?.pin === Number(inputLoginPin.value)){
       // Display UI and welcome message
@@ -169,6 +178,29 @@ btnTransfer.addEventListener('click', function(e){
 
   }
 });
+
+
+// IMPLEMENTATION OF CLOSE ACCOUNT
+
+btnClose.addEventListener('click', function(e){
+  e.preventDefault();
+  
+  const closerAcc = accounts.find(acc => acc.userName === inputCloseUsername.value);
+  
+  if(closerAcc.userName === currentAccount.userName && closerAcc.pin === Number(inputClosePin.value)){    
+    const index = accounts.findIndex(acc => acc.userName === currentAccount.userName);
+    //Delete account
+    accounts.splice(index, 1);//Original array will also get mutated
+    // Hide UI
+    containerApp.style.opacity = 0;
+    labelWelcome.textContent = `Login to get started`;
+      
+  }
+
+  inputCloseUsername.value = inputClosePin.value = '';
+  
+
+})
 
 
 /////////////////////////////////////////////////
@@ -370,7 +402,7 @@ console.log(totalDepositsUSD);*/
 
 // FIND METHOD
 
-const firstWithdrawal = movements.find(mov => mov < 0); //Unlike filter method, find() method only returns the first value that satisfies the condition
+/*const firstWithdrawal = movements.find(mov => mov < 0); //Unlike filter method, find() method only returns the first value that satisfies the condition
 
 console.log(firstWithdrawal);
 
@@ -378,6 +410,6 @@ console.log(accounts);
 
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 
-console.log(account);
+console.log(account);*/
 
 
