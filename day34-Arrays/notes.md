@@ -19,8 +19,8 @@ log - 14-06-24
 - [x] - Implementing Transfers
 - [x] - findIndex method
 - [x] - some and every
-- [ ] - flat and flatMap
-- [ ] - sorting Arrays
+- [x] - flat and flatMap
+- [x] - sorting Arrays
 - [ ] - more ways of creating and Filling arrays
 - [ ] - which array method to use when
 - [ ] - Array methods in practice
@@ -603,3 +603,135 @@ btnLoan.addEventListener('click', function(e){
 ```
 
 **Note-** All the above methods, have call back functions, call back functions can be defined outside also, it's not a rule that we define it only inside the method.
+
+
+## Flat and FlatMap
+
+flat() does not have a call back function, incase an array contains arrays as elements, using flat() method we can club them all(all the array elements of different arrays and elements) into one single array. This works for nested array
+
+for deeper nested arrays, we can mention how deep the flat method should go.
+
+```js
+const arr = [[1,2,3],[4,5,6],7,8];
+console.log(arr.flat());
+
+const arrDeep = [[[1,2],3],[4,[5,6],7,8]];
+console.log(arrDeep.flat(2));
+
+const accountMovements = accounts.map(acc => acc.movements);
+console.log(accountMovements);
+
+const allMovements = accountMovements.flat();
+const overallBalance = allMovements.reduce((acc,mov) => acc + mov,0);
+```
+
+using map and flat together is very common.
+
+So flatmap, is also used for the same reason. But flatMap goes only one level deep, if we need to go more deeper, like in case of deep nested arrays, we have to use flat() method instead.
+
+```js
+
+//FLAT AND FLATMAP
+
+const arr = [[1,2,3],[4,5,6],7,8];
+
+console.log(arr.flat());
+
+const arrDeep = [[[1,2],3],[4,[5,6],7,8]];
+console.log(arrDeep.flat(2));
+
+
+const accountMovements = accounts.map(acc => acc.movements);
+
+console.log(accountMovements);
+
+const allMovements = accountMovements.flat();
+
+const overallBalance = allMovements.reduce((acc,mov) => acc + mov,0);
+console.log(overallBalance);
+
+//FlatMap
+
+const overallBalance2 = accounts.flatMap(acc => acc.movements).reduce((accu,mov) => accu + mov,0);
+
+console.log(overallBalance2);
+```
+
+
+## Sorting Arrays
+
+One of the Javascript's built-in method is the sort() method.
+
+sort() method mutates the original array. sort() method when applied on numbers, would not work like we would have expected, because sort() method converts elements to strings and then sorts them. So we can't use the method for numbers just as it is, we have to pass in a callback function.
+
+```js
+// Ascending
+/*movements.sort((a, b) => {
+  if(a > b)
+    return 1;
+  if(b > a)
+    return -1;
+});*/
+
+movements.sort((a,b) => a - b);
+console.log(movements);
+
+// Descending
+
+/*movements.sort((a, b) => {
+  if(a > b)
+    return -1;
+  if(b > a)
+    return 1;
+});*/
+movements.sort((a,b) => b - a);
+
+console.log(movements);
+```
+
+
+## Project Bankist (part-9) 
+
+**Implementing Sort functionality**
+
+We are going to use a state variable
+
+```js
+const displayMovements = function(movements, sort = false){
+
+  containerMovements.innerHTML = '';//We want all the html tags to get included, for that reason instead of .textContent, we used innerHTML.
+
+  const movs = sort ? movements.slice().sort((a,b) => a - b) : movements;//creating copy of movements array using slice() for sort method to be applied without tampering the original array 
+
+
+  movs.forEach(function(movement, index){
+    const type = movement > 0 ? 'deposit' : 'withdrawal';
+
+      const html = `
+      <div class="movements__row">
+          <div class="movements__type movements__type--${type}">
+            ${index + 1} ${type}
+          </div>
+          
+          <div class="movements__value">${movement}€</div>
+      </div>
+      `;
+
+      containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+    
+  };
+
+
+let sorted = false;
+
+btnSort.addEventListener('click', function(e){
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
+})
+
+
+```
+
+

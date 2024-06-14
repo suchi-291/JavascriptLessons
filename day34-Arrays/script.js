@@ -67,10 +67,14 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 // Functions
-const displayMovements = function(movements){
+const displayMovements = function(movements, sort = false){
 
   containerMovements.innerHTML = '';//We want all the html tags to get included, for that reason instead of .textContent, we used innerHTML.
-  movements.forEach(function(movement, index){
+
+  const movs = sort ? movements.slice().sort((a,b) => a - b) : movements;//creating copy of movements array using slice() for sort method to be applied without tampering the original array 
+
+
+  movs.forEach(function(movement, index){
     const type = movement > 0 ? 'deposit' : 'withdrawal';
 
       const html = `
@@ -132,6 +136,15 @@ const updateUI = function(account){
       calcDisplaySummary(account);
 
 }
+
+let sorted = false;
+
+btnSort.addEventListener('click', function(e){
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
+})
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -442,6 +455,68 @@ const anyDeposits = movements.some(movement => movement > 5000 );
 console.log(anyDeposits);
 */
 
-console.log(movements.every(mov => mov > 0));
+/*console.log(movements.every(mov => mov > 0));
 
 console.log(account4.movements.every(mov => mov > 0));
+
+//FLAT AND FLATMAP
+
+const arr = [[1,2,3],[4,5,6],7,8];
+
+console.log(arr.flat());
+
+const arrDeep = [[[1,2],3],[4,[5,6],7,8]];
+console.log(arrDeep.flat(2));
+
+
+const accountMovements = accounts.map(acc => acc.movements);
+
+console.log(accountMovements);
+
+const allMovements = accountMovements.flat();
+
+const overallBalance = allMovements.reduce((acc,mov) => acc + mov,0);
+console.log(overallBalance);
+
+//FlatMap
+
+const overallBalance2 = accounts.flatMap(acc => acc.movements).reduce((accu,mov) => accu + mov,0);
+
+console.log(overallBalance2);*/
+
+// SORTING ARRAYS
+
+//sort()
+
+//Strings
+/*const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+console.log(owners.sort());
+
+//Numbers
+console.log(movements);
+console.log(movements.sort()); //This will not work as expected
+
+
+// return < 0, A, B (keep order)
+// return > 0, B, A (switch order)
+
+// Ascending
+/*movements.sort((a, b) => {
+  if(a > b)
+    return 1;
+  if(b > a)
+    return -1;
+});
+
+console.log(movements);
+
+// Descending
+
+movements.sort((a, b) => {
+  if(a > b)
+    return -1;
+  if(b > a)
+    return 1;
+});
+
+console.log(movements);*/
