@@ -36,3 +36,4 @@ All the javascript course material that gets you ready to learn frameworks from 
 |Day31 | Arrays | [link](https://github.com/suchi-291/JavascriptLessons/tree/8ea9b24938799b7c3da8bb95ec25c91e5f365754/day31-Arrays) |
 |Day32 | Arrays | [link](https://github.com/suchi-291/JavascriptLessons/tree/8ea9b24938799b7c3da8bb95ec25c91e5f365754/day32-Arrays) |
 |Day33 | Arrays | [link](https://github.com/suchi-291/JavascriptLessons/tree/8ea9b24938799b7c3da8bb95ec25c91e5f365754/day33-Arrays) |
+|Day34 | Arrays | [link](https://github.com/suchi-291/JavascriptLessons/tree/457b9066e7e96ff6f3983f5f71e875b6e0cb10d0/day34-Arrays)|
